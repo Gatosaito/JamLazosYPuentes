@@ -3,7 +3,31 @@ guid: 869743d4b68582a4eacfe38dfb0b7119
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camiseta
+    second: {fileID: -463436858852443432, guid: 5ff22d1302399e44780707ed4ab31cc2,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalones
+    second: {fileID: -9104180907787310832, guid: 5ff22d1302399e44780707ed4ab31cc2,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 4835078630258379571, guid: 5ff22d1302399e44780707ed4ab31cc2,
+      type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Zapatos
+    second: {fileID: 2376676787998607350, guid: 5ff22d1302399e44780707ed4ab31cc2,
+      type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -15,7 +39,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
-    motionNodeName: 
+    motionNodeName: <Root Transform>
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -361,17 +385,17 @@ ModelImporter:
       parentName: mixamorig:RightShoulder
       position: {x: -3.5527136e-17, y: 0.11296615, z: 1.4210854e-16}
       rotation: {x: -0.14568454, y: 0.029742379, z: 0.012399467, w: 0.9888062}
-      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
     - name: mixamorig:RightForeArm
       parentName: mixamorig:RightArm
       position: {x: -4.440892e-18, y: 0.25522435, z: -7.105427e-17}
       rotation: {x: 0.0041192616, y: -0.31248578, z: -0.023757167, w: -0.9496164}
-      scale: {x: 0.9999998, y: 0.9999997, z: 0.9999997}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.99999964}
     - name: mixamorig:RightHand
       parentName: mixamorig:RightForeArm
       position: {x: -3.5527136e-17, y: 0.3468914, z: -7.105427e-17}
       rotation: {x: 0.0000000074505815, y: -0, z: -0, w: 1}
-      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
+      scale: {x: 1, y: 1.0000002, z: 1.0000004}
     - name: mixamorig:LeftUpLeg
       parentName: mixamorig:Hips
       position: {x: -0.07621939, y: -0.04388893, z: 0.0072639743}
