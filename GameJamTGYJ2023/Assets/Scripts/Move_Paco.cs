@@ -18,7 +18,6 @@ public class Move_Paco : MonoBehaviour
     public float BalanceoIntensity = 0.1f;
 
     private Camera playerCamera;
-    public CapsuleCollider capsulecollider;
     private CharacterController characterController;
     private float verticalRotation = 0f;
 
@@ -74,29 +73,36 @@ public class Move_Paco : MonoBehaviour
 
         if (isWalking)
         {
-            animator.SetBool("Correr", true);
             float swayAmountX = Mathf.Sin(Time.time * BalanceoSpeed) * BalanceoIntensity;
             float swayAmountZ = Mathf.Cos(Time.time * BalanceoSpeed) * BalanceoIntensity;
 
             playerCamera.transform.localRotation *= Quaternion.Euler(swayAmountX, 0f, swayAmountZ);
         }
-        else
+
+        if (!isWalking)
+        {
+            animator.SetBool("caminar_Atras", false);
+            animator.SetBool("Correr", false);
+            animator.SetBool("Idle", true);
+        }
+        else if (Input.GetAxisRaw("Vertical") > 0f)
+        {
+            animator.SetBool("Correr", true);
+            animator.SetBool("caminar_Atras", false);
+            animator.SetBool("Idle", false);
+        }
+        else if (Input.GetAxisRaw("Vertical") < 0f)
         {
             animator.SetBool("Correr", false);
-        }
+            animator.SetBool("caminar_Atras", true);
+            animator.SetBool("Idle", false);
 
-        if (Input.GetAxisRaw("Vertical") < 0f)
-        {
             movementSpeed = velocidadRetroceder;
         }
-
         else
         {
             movementSpeed = baseSpeed;
         }
-
-
-        
 
         // Rotación de la cámara 
 
@@ -110,8 +116,6 @@ public class Move_Paco : MonoBehaviour
         Quaternion targetRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
         playerCamera.transform.localRotation = Quaternion.Lerp(playerCamera.transform.localRotation, targetRotation, smoothRotation * Time.deltaTime);
         transform.Rotate(Vector3.up * mouseX);
-
-
     }
 }
 

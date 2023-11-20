@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Idle
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
@@ -309,7 +309,8 @@ ModelImporter:
     - name: mixamorig:Spine1
       parentName: mixamorig:Spine
       position: {x: -0, y: 0.09234706, z: 0}
-      rotation: {x: -0.0000000037252903, y: 0.0000000017731259, z: 0.000000001006717, w: 1}
+      rotation: {x: -0.0000000037252903, y: 0.0000000017731259, z: 0.000000001006717,
+        w: 1}
       scale: {x: 1.0000001, y: 1, z: 1.0000002}
     - name: mixamorig:Spine2
       parentName: mixamorig:Spine1
