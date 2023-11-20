@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.PlayerLoop;
+using Unity.VisualScripting;
 
 public class Move_Paco : MonoBehaviour
 {
@@ -32,6 +34,9 @@ public class Move_Paco : MonoBehaviour
 
     public Animator animator;
 
+    int movXAnimatorBlendTree;
+    int movZAnimatorBlendTree;
+
     void Start()
     {
         movementSpeed = baseSpeed;
@@ -39,12 +44,25 @@ public class Move_Paco : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
         rd = GetComponent<Rigidbody>();
+        animator.SetFloat("MoveX", 1f);
+        
+    }
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        movXAnimatorBlendTree = Animator.StringToHash("MovX");
+        movZAnimatorBlendTree = Animator.StringToHash("MovZ"); // Maldita variable mas dificil de acceder
+                                                               // pero sumamente importante
+                                                               // Esto sirve para modificar desde codigo la variable del blend tree -D
     }
 
     private void Update()
     {
         float moveInput = Mathf.Abs(Input.GetAxisRaw("Horizontal")) + Mathf.Abs(Input.GetAxisRaw("Vertical"));
         isWalking = moveInput > 0f;
+
+        animator.SetFloat(movXAnimatorBlendTree, Input.GetAxisRaw("Horizontal"));
+        animator.SetFloat(movZAnimatorBlendTree, Input.GetAxisRaw("Vertical"));
     }
 
     private void FixedUpdate()
@@ -78,7 +96,8 @@ public class Move_Paco : MonoBehaviour
 
             playerCamera.transform.localRotation *= Quaternion.Euler(swayAmountX, 0f, swayAmountZ);
         }
-
+        /*
+         * Creo que esto no lo necesitamos, no lo voy a borrar por si acaso lo necesita - D
         if (!isWalking)
         {
             animator.SetBool("caminar_Atras", false);
@@ -98,7 +117,7 @@ public class Move_Paco : MonoBehaviour
             animator.SetBool("Idle", false);
 
             movementSpeed = velocidadRetroceder;
-        }
+        }*/
         else
         {
             movementSpeed = baseSpeed;
@@ -117,5 +136,6 @@ public class Move_Paco : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Lerp(playerCamera.transform.localRotation, targetRotation, smoothRotation * Time.deltaTime);
         transform.Rotate(Vector3.up * mouseX);
     }
+
 }
 
