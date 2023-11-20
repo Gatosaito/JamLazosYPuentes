@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 7d37db3230f15774c8184908ed29322d
+guid: 35922fe999e5df04a9b91e102811453d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Almohada
+    second: {fileID: 2800000, guid: b147f4af72e3ecc4483780b14ad8b6e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Colchon
+    second: {fileID: 2800000, guid: c6a2815764b432c48b95a26d0de100e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Madera
+    second: {fileID: 2800000, guid: 67fc15903ac82d04fa822d31cf9996eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sabana
+    second: {fileID: 2800000, guid: 8bc2863c6420bc34999b883272bf4698, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blanco
+    second: {fileID: 2800000, guid: 49e6d89227a8e23418d4181728ad447f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

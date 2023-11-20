@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 40bd6352c0eacc84e948e98c37758a2a
+guid: efef252452ac8c24582e0850fec08722
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: amarillo
+    second: {fileID: 2800000, guid: db06b5162ef9b164c8bf276a2eaefe26, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: blanco
+    second: {fileID: 2800000, guid: ad24be11af509fe458fb44965534f5fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: negro
+    second: {fileID: 2800000, guid: 525317806dae7a743917abe7a5995a3b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
