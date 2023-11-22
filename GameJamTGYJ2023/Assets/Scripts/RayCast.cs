@@ -7,6 +7,7 @@ public class RayCast : MonoBehaviour
     private new Transform camera;
     public float rayDistance;
     public int objetos_Cambiados;
+    public GameObject balon;
 
     void Start()
     {
@@ -20,11 +21,18 @@ public class RayCast : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Boton")))
         {
-            Debug.Log(hit.transform.name);
-
             if (Input.GetKeyDown(KeyCode.E))
             {
-                ChangeColorToRed(hit.transform.gameObject);
+                if (!IsColorRed(hit.transform.gameObject))
+                {
+                    ChangeColorToRed(hit.transform.gameObject);
+                    objetos_Cambiados++;
+
+                    if(objetos_Cambiados == 3)
+                    {
+                        balon.SetActive(true);
+                    }
+                }
             }
         }
     }
@@ -36,5 +44,15 @@ public class RayCast : MonoBehaviour
         {
             renderer.material.color = Color.red;
         }
+    }
+
+    private bool IsColorRed(GameObject obj)
+    {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            return renderer.material.color == Color.red;
+        }
+        return false;
     }
 }
