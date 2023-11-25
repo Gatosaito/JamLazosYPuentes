@@ -14,7 +14,12 @@ public class SceneDirector : MonoBehaviour
     public PlayableDirector directorPaneo;
     public PlayableDirector directorBotones;
     public PlayableDirector cargarpantalla;
+    public AudioSource musiquitaFachera;
 
+    private void Awake()
+    {
+        //musiquitaFachera = FindObjectOfType<AudioSource>();
+    }
     void Start()
     {
         StartCoroutine(EsperarInicio());
@@ -48,6 +53,8 @@ public class SceneDirector : MonoBehaviour
         yield return new WaitForSeconds(waitForIniciar);
         Debug.Log("Empezó");
         directorInicio.Play();
+        yield return new WaitForSeconds(1f);    
+        musiquitaFachera.Play();
     } 
     IEnumerator WaitForJugar()
     {

@@ -13997,6 +13997,7 @@ MonoBehaviour:
   directorInicio: {fileID: 6831166226242686490}
   waitForIniciar: 1
   directorPaneo: {fileID: 0}
+  directorBotones: {fileID: 0}
   cargarpantalla: {fileID: 0}
 --- !u!4 &6831166225950634006
 Transform:
@@ -14225,7 +14226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8553984855799785322
 Transform:
   m_ObjectHideFlags: 0
