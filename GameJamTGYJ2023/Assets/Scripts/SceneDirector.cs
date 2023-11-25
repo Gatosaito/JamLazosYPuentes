@@ -12,6 +12,7 @@ public class SceneDirector : MonoBehaviour
     [Space(2)]
     [Header("HOla")]
     public PlayableDirector directorPaneo;
+    public PlayableDirector directorBotones;
     public PlayableDirector cargarpantalla;
 
     void Start()
@@ -50,7 +51,7 @@ public class SceneDirector : MonoBehaviour
     } 
     IEnumerator WaitForJugar()
     {
-
+        directorBotones.Play();
         yield return new WaitForSeconds(2f);
         cargarpantalla.Play();
         yield return new WaitForSeconds(2f);
