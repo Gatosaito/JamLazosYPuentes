@@ -42,7 +42,7 @@ public class RayCast : MonoBehaviour
         Renderer renderer = obj.GetComponent<Renderer>();
         if (renderer != null)
         {
-            renderer.material.color = Color.red;
+            renderer.material.color = Color.green;
         }
     }
 
@@ -51,7 +51,7 @@ public class RayCast : MonoBehaviour
         Renderer renderer = obj.GetComponent<Renderer>();
         if (renderer != null)
         {
-            return renderer.material.color == Color.red;
+            return renderer.material.color == Color.green;
         }
         return false;
     }
