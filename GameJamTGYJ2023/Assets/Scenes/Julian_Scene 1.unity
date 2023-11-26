@@ -2878,17 +2878,17 @@ PrefabInstance:
     - target: {fileID: 5559327225265603116, guid: 0e2b4039a86985243a0a0383e1c7577f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 253.8
+      value: 296.8
       objectReference: {fileID: 0}
     - target: {fileID: 5559327225265603116, guid: 0e2b4039a86985243a0a0383e1c7577f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 98.9
+      value: 94.78
       objectReference: {fileID: 0}
     - target: {fileID: 5559327225265603116, guid: 0e2b4039a86985243a0a0383e1c7577f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.4
+      value: 6.8
       objectReference: {fileID: 0}
     - target: {fileID: 5559327225265603116, guid: 0e2b4039a86985243a0a0383e1c7577f,
         type: 3}
@@ -13999,6 +13999,7 @@ MonoBehaviour:
   directorPaneo: {fileID: 0}
   directorBotones: {fileID: 0}
   cargarpantalla: {fileID: 0}
+  musiquitaFachera: {fileID: 0}
 --- !u!4 &6831166225950634006
 Transform:
   m_ObjectHideFlags: 0
