@@ -15,5 +15,10 @@ public class Terminar : MonoBehaviour
 
         }
     }
+
+    public void cargarscena()
+    {
+        SceneManager.LoadScene(Scena);
+    }    
 }
 
