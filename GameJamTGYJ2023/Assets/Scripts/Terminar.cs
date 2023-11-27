@@ -12,6 +12,7 @@ public class Terminar : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(Scena);
+            Cursor.lockState = CursorLockMode.None;
 
         }
     }
