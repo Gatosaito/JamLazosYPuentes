@@ -8,6 +8,7 @@ public class RayCast : MonoBehaviour
     public float rayDistance;
     public int objetos_Cambiados;
     public GameObject balon;
+    public GameObject felcha;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class RayCast : MonoBehaviour
                     if(objetos_Cambiados == 3)
                     {
                         balon.SetActive(true);
+                        felcha.SetActive(true);
                     }
                 }
             }

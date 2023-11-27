@@ -7,6 +7,7 @@ public class Puente_2 : MonoBehaviour
     public GameObject balon;
     public Animator puenteAnimator;
     public Animator balon_Anim;
+    public GameObject Flecha;
     public bool balonActivado = false;
 
     private void Start()
@@ -25,6 +26,7 @@ public class Puente_2 : MonoBehaviour
         {
             balon_Anim.SetBool("Action", true);
             Invoke("Activar", 2f);
+            Flecha.SetActive(false);
             balonActivado = true;
         }
     }

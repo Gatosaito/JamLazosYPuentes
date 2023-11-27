@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Julian_Scene 1.unity
     guid: eb0f65b6434089c439d1f4297379b28d
+  - enabled: 1
+    path: Assets/Scenes/Terminar.unity
+    guid: a1356c5e7bb3d604194be5c8d4174363
   m_configObjects: {}
